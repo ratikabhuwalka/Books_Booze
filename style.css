@@ -8,6 +8,8 @@ html, body{
 }
 .navbar{
   padding: .8rem;
+  position: fixed;
+  width: 100%;
 }
 .navbar-brand img{
   width: 150px;
