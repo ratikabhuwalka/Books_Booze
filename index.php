@@ -18,7 +18,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="#"><img src="img/logo5.png"></a>
+		<a class="navbar-brand" href="#"><img src="img/logo.png"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -75,84 +75,42 @@
 </div>
 
 
-
 <!--- Welcome Section -->
+<p id="about">
+	<br/><br/><br/>
+</p>
 <div class="container-fluid padding"data-aos="fade-up"
 		data-aos-offset="200"
 		data-aos-delay="50"
 		data-aos-duration="1000">
-	<div class="row welcome text-center" id="about">
+	<div> </div>
+	<div class="row welcome text-center" >
+
 		<div class="col-12">
 			<h1 class="display-4">Grab a book, a beer or both!</h1>
 		</div>
 		<hr>
 		<div class="col-12">
-			<p class="lead">Welcome to Books & Booze.
-				You can come chill with friends and read a book or two. You can also "book" a table and rent/order books on this website.</p>
+			<br/> <br/>
+			<p class="lead">Welcome to Books & Booze. It started as a book reading club by two best friends. 
+				They'd meet every week to discuss about their latest read and took the tiring week's heat off with a breezer. 
+				More people grew interested in this club and this gave birth to "Books & Booze." <br/> <br/><br/>
+				It's a tiny little nook for book lovers. You can come chill with friends and read a book or two. 
+				We also provide the facility to reserve a table and rent or order books through this website.</p>
 		</div>
 	</div>
 </div>
-
-<!--- Three Column Section -->
-<div class="container-fluid padding"data-aos="fade-up"
-		data-aos-offset="200"
-		data-aos-delay="50"
-		data-aos-duration="1000">
-	<div class="row text-center padding">
-		<div class="col-xs-12 col-sm-6 col-md-4">
-			<i class="fas fa-code"></i>
-			<h3>Book Table</h3>
-			<p>
-				Mon-Fri: 9am - 6pm <br/>
-				Sat-Sun: 11am - 11pm
-			</p>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-4">
-			<i class="fas fa-bold"></i>
-			<h3>BOOTSTRAP</h3>
-			<p>Built with the latest version of Bootstrap, Bootstrap 4.</p>
-		</div>
-		<div class="col-xs-12 col-md-4">
-			<i class="fab fa-css3"></i>
-			<h3>CSS3</h3>
-			<p>Built with the latest version of CSS, CSS3.</p>
-		</div>
-	</div>
-	<hr class="my-4">
+</div>
 </div>
 
-<!--- Two Column Section -->
-<div class="container-fluid padding"data-aos="fade-up"
-		data-aos-offset="200"
-		data-aos-delay="50"
-		data-aos-duration="1000">
-	<div class="row padding">
-		<div class="col-md-12 col-lg-6">
-			<h2>If you build it...</h2>
-			<p>The columns will automatically stack on each other when
-				the screen is less than 576px wide.</p>
-			<p>Resize the browserwindow to see the effect. Responsive web
-				design has become more important as the amount of mobile traffic now
-				accounts for more than half of total internet traffic.</p>
-			<p>It can also display the web page differently depending on the
-				screen size or viewing device.</p>
-				<br>
-				<a href="#" class="btn btn-primary">Learn More</a>
-		</div>
-		<div class="col-lg-6">
-			<img src="img/desk.png" class="img-fluid">
-		</div>
-	</div>
-</div>
-
-<hr class="my-4">
-
-
+<p id="services">
+	<br/><br/>
+</p>
 <!--- Meet the team -->
-<div class="container-fluid padding"  id="services"> 
+<div class="container-fluid padding"> 
 	<div class="row welcome text-center">
 		<div class="col-12">
-			<h1 class="display-4">Meet the Team </h1>
+			<h1 class="display-4"> Our Services </h1>
 		</div>
 	</div>
 </div>
@@ -165,35 +123,41 @@
 	<div class="row padding">
 		<div class="col-md-4">
 			<div class="card">
-				<img class="card-img-top" src="img/team1.png">
+				<img class="card-img-top" src="img/reserve.jpeg">
 				<div class="card-body">
-					<h4 class="card-title">John Doe</h4>
-					<p class="card-text">John is an Interent
-						entrepreneur with almost 20 years of experience.
+					<h4 class="card-title">Book a Table</h4>
+					<p class="card-text"> Monday - Friday : 9:00 am - 6:00 pm </br>
+										  Saturday - Sunday : 11 am - 11 pm
 					</p>
-					<a href="#" class="btn btn-outline-secondary">See Profile</a>
+					<a href="#" class="btn btn-outline-secondary">Book Now</a>
 				</div>
 			</div>
 		</div>
 		<div class="col-md-4">
 			<div class="card">
-				<img class="card-img-top" src="img/team2.png">
+				<img class="card-img-top" src="img/books.jpeg">
+				<br/>
 				<div class="card-body">
-					<h4 class="card-title">Mary Jo</h4>
-					<p class="card-text">Mary is a designer with a almost 10 years
-					of digital design experience.</p>
-					<a href="#" class="btn btn-outline-secondary">See Profile</a>
+					<h4 class="card-title">Get a Book</h4>
+					<p class="card-text"> 
+						Rent for 7 days for free </br>
+						Buy at 10% off on MRP
+					</p>
+					<br/>
+					<a href="#" class="btn btn-outline-secondary">Browse</a>
+					<br/>
+			
 				</div>
 			</div>
 		</div>
 		<div class="col-md-4">
 			<div class="card">
-				<img class="card-img-top" src="img/team3.png">
+				<img class="card-img-top" src="img/member.png">
 				<div class="card-body">
-					<h4 class="card-title">Phil Ho</h4>
-					<p class="card-text">Phil is an developer with over 5 years
-					of web development experience.</p>
-					<a href="#" class="btn btn-outline-secondary">See Profile</a>
+					<h4 class="card-title">Become a Member</h4>
+					<p class="card-text"> Get access to premium book clubs, discounts, free merchandise and much more.</p>
+					<br/>
+					<a href="#" class="btn btn-outline-secondary">Know More</a>
 				</div>
 			</div>
 		</div>
@@ -201,26 +165,27 @@
 </div>
 
 <!--- Two Column Section -->
+<p id="news">
+	<br/><br/><br/><br/>
+</p>
 <div class="container-fluid padding" data-aos="fade-up"
 		data-aos-offset="200"
 		data-aos-delay="50"
 		data-aos-duration="1000" id = "news">
 	<div class="row padding">
 		<div class="col-md-12 col-lg-6">
-			<h2>Our Philosophy</h2>
-			<p>We know that greatness in a disruptive era requires bold
-				ambition, curious talent and a culture that believes we're
-			    smarter together.</p>
-			<p>We approach every challenge hostically, with best-in-class
-				expertise in data, creativity, media, technology, search, social and
-				more. We call this Alchemy. It has the power to build our clients'
-				brands and transform their business. And white it may seem like
-				magic, we've got it down to a science.
-			</p>
-
+			<h1 class="display-4">News</h1>
+			<br/>
+			<div>
+				<p>We know have received praises and coverage in the leading news channels and papers <br/><br/>
+			Times (14th September 2020):<p><i>"Ratika Bhuwalka took her fascination with Books and Chill and turned it into something unexpectedly interesting for the rest of us.</i> </p>
+			Daily Express(26th June 2021):<br/><br/><p><i>"Well-curate and broad selection of books in a peaceful space, just next to a spacious cafe with tasty tea ,treats and more!"</i> </p>	
+			</div>
+			<br/><br/>
+			<a href="#" class="btn btn-outline-secondary">Read More</a>
 		</div>
 		<div class="col-lg-6">
-			<img src="img/bootstrap2.png" class="img-fluid">
+			<img src="img/news.jpg" class="img-fluid">
 		</div>
 	</div>
 	<hr class="my-4">
@@ -250,17 +215,19 @@
 		data-aos-duration="1000">
 		<div class="row text-center">
 			<div class="col-md-4 pt-0">
+			<?php $read = file('contact.txt'); ?>
 				<div class="footer-image">
-				<img src="img/logo5.png"></div>
+				<img src="img/logo.png"></div>
 				<hr class="light">
-				<p>555-555-5555</p>
-				<p>email@hhemail.com</p>
-				<p>69 Street Name</p>
-				<p>City, State, 888</p>
+				<?php foreach ($read as $line){
+					?>
+					<p> <?php echo $line ?> </p>
+				<?php } ?>
+				
 			</div>
 			<div class="col-md-4">
 				<hr class="light">
-				<h5>Our hours</h5>
+				<h5>Office hours</h5>
 				<hr class="light">
 				<p>Monday: 9am - 5pm</p>
 				<p>Saturday: 10am - 4pm</p>
@@ -270,15 +237,12 @@
 				<hr class="light">
 				<h5>Service Area</h5>
 				<hr class="light">
-				<p>City, State, 900</p>
-				<p>City, State, 800</p>
-				<p>City, State, 700</p>
-				<p>City, State, 600</p>
+				<p>Santa Clara, CA, 900</p>
+				<p>San Francisco, CA, 800</p>
+				<p>New York City, NY, 700</p>
+			
 			</div>
-			<div class="col-12">
-				<hr class="light-100">
-				<h5>&copy; Website Learning </h5>
-			</div>
+
 		</div>
 	</div>
 </footer>
@@ -287,14 +251,6 @@
 <script>
 AOS.init();
 </script>
-<!-- <?php
-		$read = file('test.txt');
-		foreach($read as $sread){
-			echo $sread;?>
-			<br>
-			<?php
-			
-		}
-	  ?> -->
+
 </body>
 </html>
