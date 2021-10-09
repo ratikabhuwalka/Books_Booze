@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<!-- Navigation -->
+
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="#"><img src="img/logo.png"></a>
@@ -37,6 +37,9 @@
 					<a class="nav-link" href="#news">News</a>
 				</li>
 				<li class="nav-item">
+					<a class="nav-link" href="#login">Login</a>
+				</li>
+				<li class="nav-item">
 					<a class="nav-link" href="#connect">Connect</a>
 				</li>
 			</ul>
@@ -44,7 +47,7 @@
 	</div>
 </nav>
 
-<!--- Image Slider -->
+
 <div id="slides" class="carousel slide" data-ride="carousel" data-aos="fade-up"
 		data-aos-offset="200"
 		data-aos-delay="50"
@@ -75,7 +78,7 @@
 </div>
 
 
-<!--- Welcome Section -->
+
 <p id="about">
 	<br/><br/><br/>
 </p>
@@ -106,7 +109,7 @@
 <p id="services">
 	<br/><br/>
 </p>
-<!--- Meet the team -->
+
 <div class="container-fluid padding"> 
 	<div class="row welcome text-center">
 		<div class="col-12">
@@ -115,7 +118,7 @@
 	</div>
 </div>
 
-<!--- Cards -->
+
 <div class="container-fluid padding" data-aos="fade-up"
 		data-aos-offset="200"
 		data-aos-delay="50"
@@ -164,7 +167,7 @@
 	</div>
 </div>
 
-<!--- Two Column Section -->
+
 <p id="news">
 	<br/><br/><br/><br/>
 </p>
@@ -191,7 +194,35 @@
 	<hr class="my-4">
 </div>
 
-<!--- Connect -->
+
+<div class="login" id="login">
+<form action="" method="post" name="Login_Form" action="validation.php">
+  <table width="400" border="0" align="center" cellpadding="5" cellspacing="1" class="Table">
+    <?php if(isset($msg)){?>
+    <tr>
+      <td colspan="2" align="center" valign="top"><?php echo $msg;?></td>
+    </tr>
+    <?php } ?>
+    <tr>
+      <td colspan="2" align="left" valign="top"><h3>Login</h3></td>
+    </tr>
+    <tr>
+      <td align="right" valign="top">Username</td>
+      <td><input name="Username" type="text" class="Input"></td>
+    </tr>
+    <tr>
+      <td align="right">Password</td>
+      <td><input name="Password" type="password" class="Input"></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><input name="Submit" type="submit" value="Login" class="Button3"></td>
+    </tr>
+  </table>
+</form>
+</div>
+
+
 <div class="container-fluid padding" id="connect">
 	<div class="row text-center padding">
 		<div class="col-12">
@@ -207,7 +238,7 @@
 	</div>
 </div>
 
-<!--- Footer -->
+
 <footer>
 	<div class="container-fluid padding" data-aos="fade-up"
 		data-aos-offset="200"
