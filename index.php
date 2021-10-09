@@ -196,7 +196,7 @@
 
 
 <div class="login" id="login">
-<form action="" method="post" name="Login_Form" action="validation.php">
+<form method="post" name="Login_Form" action="validation.php">
   <table width="400" border="0" align="center" cellpadding="5" cellspacing="1" class="Table">
     <?php if(isset($msg)){?>
     <tr>
