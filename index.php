@@ -39,6 +39,13 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#login">Login</a>
 				</li>
+
+				<li class="nav-item">
+					<a href="add_user.php" class="nav-link" >Add User</a>
+				</li>
+				<li class="nav-item">
+					<a href="get_user.php" class="nav-link" >Get User</a>
+				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#connect">Connect</a>
 				</li>

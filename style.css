@@ -6,6 +6,8 @@ html, body{
   font-family: 'Poppins', sans-serif;
   color:#222;
 }
+
+
 .navbar{
   padding: .8rem;
   position: fixed;
