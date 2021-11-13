@@ -112,8 +112,7 @@ foreach($results as $result)
                             <p> Add More Users? <a href = add_user.php>add user</a>
                             Go Back to Home? <a href = index.php>home</a></p>
 					</div>
-	
-
+				 	See Users of Kajal's Company <a href= 'curl.php'> Click here </a>
 			</div>
 		</div>
 	</div>
