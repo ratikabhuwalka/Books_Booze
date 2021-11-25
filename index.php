@@ -49,6 +49,10 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#connect">Connect</a>
 				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="poll.php">Poll</a>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -154,7 +158,7 @@
 						Buy at 10% off on MRP
 					</p>
 					<br/>
-					<a href="#" class="btn btn-outline-secondary">Browse</a>
+					<a href="products.php" class="btn btn-outline-secondary">Browse</a>
 					<br/>
 			
 				</div>
