@@ -24,26 +24,19 @@
 
             <?php
             include('config.php');
-            $sql = "SELECT * from  Products";
-            $query = $dbh -> prepare($sql);
-            $query->execute();
-            $results=$query->fetchAll(PDO::FETCH_OBJ);
-            $cnt=1;
-            if($query->rowCount() > 0)
-            {
-            $json = json_encode($results);
-            foreach($results as $result)
-            {				?>	
-                                                    <tr>
-                                                        <td><?php echo htmlentities($result->id);?></td>
-                                                        <td><?php echo htmlentities($result->name);?></td>
-                                                        <td><?php echo htmlentities($result->price);?></td>
-                                                        <td><?php echo htmlentities($result->img);?></td>
-                                                        <td><?php echo htmlentities($result->description);?></td>
-                                                        <td><?php echo htmlentities($result->category);?></td>
-                                                    </tr>
-                                                    <!-- <?php $cnt=$cnt+1; }} ?> -->
-                                                    
+            include('functions.php');
+            getProductall();
+            // $sql = "SELECT * from  Products";
+            // $query = $dbh -> prepare($sql);
+            // $query->execute();
+            // $results=$query->fetchAll(PDO::FETCH_OBJ);
+            // $cnt=1;
+            // if($query->rowCount() > 0)
+            // {
+            // $json = json_encode($results);
+            // foreach($results as $result)
+            // {				?>	
+                                           
             </tbody>
 
             </table>
