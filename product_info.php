@@ -33,7 +33,7 @@ $query = $dbh -> prepare($sql);
 $query->execute();
 $result=$query->fetch(PDO::FETCH_OBJ);
 if($query->rowCount() > 0)
-
+  {
     $name = $result->name;
     $price = $result->price;
     $img = $result->img;
@@ -43,6 +43,17 @@ if($query->rowCount() > 0)
     $genre = $result->genre;
     $published = $result->published;
 
+  }
+
+
+    $rating_stats = "SELECT ROUND(AVG(a.rating), 1) AS averageRating, COUNT(a.rating) as numOfRatings 
+        FROM review as a INNER JOIN Products as b WHERE a.productId = b.id and a.productId = $id GROUP BY a.productId";
+        $query = $dbh -> prepare($rating_stats);
+        $query->execute();
+        $rating_obj=$query->fetch(PDO::FETCH_OBJ);
+        
+        $avgRating = (int)$rating_obj->averageRating;
+        $numReviews = (int)$rating_obj->numOfRatings;
 
     if(isset($_POST['submit']))
     {
@@ -71,7 +82,8 @@ if($query->rowCount() > 0)
         if($lastInsertId)
         {
         echo "<script type='text/javascript'>alert('Review Added Successfully!');</script>";
-       // echo "<script type='text/javascript'> document.location = 'get_user.php'; </script>";
+        echo "<meta http-equiv='refresh' content='0'>";
+        // echo "<script type='text/javascript'> document.location = 'get_user.php'; </script>";
         }
         else 
         {
@@ -85,49 +97,50 @@ if($query->rowCount() > 0)
 <!--Section: Block Content-->
 <section class="mb-5">
 
-  <div class="row">
-    <div class="col-md-6 mb-4 mb-md-0">
 
-      <div id="mdb-lightbox-ui"></div>
-
-      <div class="mdb-lightbox">
-
-        <div class="row product-gallery mx-1">
-
-          <div class="col-12 mb-0">
-            <figure class="view overlay rounded z-depth-1 main-img">
-              
-                <img src=<?php echo $img; ?>
-                  class="img-fluid z-depth-1">
-              </a>
-            </figure>
-            
-        </div>
-         
-        </div>
-
-      </div>
-
-    </div>
+  <div class="row padding">
+  
+  <div class="col-md-12 col-lg-6">
+    <centre>
+    <div class="row product-gallery mx-1">
     <div class="col-md-6">
+          
+              <img src=<?php echo $img; ?>
+                width="500px"
+                height = "500px"
+              >
+  
+    </div>
+    </div>
+    </centre>
+    </div>
+
+
+		<div class="col-lg-6">
 
       <h5><?php echo $name; ?></h5>
         <ul class = "list-inline" white-space="nowrap" overflow="hidden">
-        <li class="list-inline-item" display="inline">
-          <i class="fas fa-star fa-sm text-primary"></i>
-        </li>
-        <li class="list-inline-item" display="inline">
-          <i class="fas fa-star fa-sm text-primary"></i>
-        </li>
-        <li class="list-inline-item" display="inline">
-          <i class="fas fa-star fa-sm text-primary"></i>
-        </li>
-        <li class="list-inline-item" display="inline">
-          <i class="fas fa-star fa-sm text-primary"></i>
-        </li>
-        <li class="list-inline-item" display="inline">
-          <i class="far fa-star fa-sm text-primary"></i>
-        </li>
+        <?php
+                    $stars = $avgRating;
+                    $count = 1;
+                    
+                    for($i = 1; $i <= 5; $i++){
+                        if($stars >= $count){
+                            $printstar = 
+                            "<li class='list-inline-item' display='inline'>
+                            <i class='fas fa-star fa-sm text-primary'></i>
+                            </li>";
+                        } else {
+                            $printstar =
+                            "<li class='list-inline-item' display='inline'>
+                            <i class='far fa-star fa-sm text-primary'></i>
+                            </li>";
+                        }
+                        $count++;
+
+                        echo $printstar;
+                      }
+          ?>
       </ul>
       <p><span class="mr-1"><strong>$<?php echo $price; ?></strong></span></p>
       <p class="pt-1"><?php echo $description; ?></p>
@@ -182,7 +195,7 @@ if($query->rowCount() > 0)
 
   <ul class="nav tabs-primary nav-justified" id="advancedTab" role="tablist">
   <li class="nav-item">
-      <a class="nav-link active show" id="description-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="description" aria-selected="true">Reviews & Ratings</a>
+      <a class="nav-link active show" id="description-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="description" aria-selected="true">Reviews & Ratings(<?php echo $numReviews;?>)</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" id="reviews-tab" data-toggle="tab" href="#add-review" role="tab" aria-controls="reviews" aria-selected="false">Add Review</a>
