@@ -30,9 +30,19 @@
 
             array_push($reviews, $review);
         }
-
-        // set response code - 200 OK
         echo json_encode($reviews);
+        // set response code - 200 OK
+        // $secondChancesProductsResponse = json_encode($reviews);
+        // $allProducts = array();
+
+        // $arr= json_decode($secondChancesProductsResponse);
+
+        // foreach ($arr as $scprod) {
+        //   array_push($allProducts, $scprod);
+        // }
+  
+        // echo $allProducts[0]->productId;
+
         http_response_code(200);
 
         
