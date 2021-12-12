@@ -8,8 +8,7 @@
         $query->execute();
         $result=$query->fetchAll(PDO::FETCH_OBJ);
         
-        echo json_encode($result);
-
+       
         // $highest_review = "SELECT a.productId as productId, b.name as productName, b.img as productLink, GROUP_CONCAT(a.rating SEPARATOR ', ') 
         // AS ratings, GROUP_CONCAT(a.review SEPARATOR '|') AS reviews, COUNT(a.review) as numOfReviews 
         // FROM review as a INNER JOIN Products as b WHERE a.productId = b.id GROUP BY a.productId ORDER BY COUNT(a.review) DESC LIMIT 5";
@@ -17,24 +16,24 @@
         // $query->execute();
         // $highestReviewResult=$query->fetchAll(PDO::FETCH_OBJ);
         // $reviews=array();
-        // $reviews["data"]=array();
 
-        // foreach($highestReviewResult as $row){
-        //     $review=array(
-        //         "productId" => $row->productId,
-        //         "productName" => $row->productName,
-        //         "productLink" => $row->productLink,
-        //         "ratings" => $row->ratings,
-        //         "reviews" => $row->reviews,
-        //         "numOfReviews" => $row->numOfReviews,
-        //     );
+        $reviews=array();
 
+        foreach($result as $row){
+            $review=array(
+                "productId" => $row->productId,
+                "productName" => $row->productName,
+                "productLink" => $row->productLink,
+                "averageRating" => $row->averageRating,
+                "numOfRatings" => $row->numOfRatings,
+            );
 
-        //     array_push($reviews["data"], $review);
-        // }
+            array_push($reviews, $review);
+        }
 
-        // // set response code - 200 OK
-        // http_response_code(200);
+        // set response code - 200 OK
+        echo json_encode($reviews);
+        http_response_code(200);
 
         
         // echo json_encode($highestReviewResult);
