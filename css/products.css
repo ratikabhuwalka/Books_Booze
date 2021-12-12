@@ -228,7 +228,7 @@ img{
 
 
 /* Media Queries */
-@media screen and (min-width: 992px){
+/* @media screen and (min-width: 992px){
     .product-items{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -237,7 +237,7 @@ img{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-}
+}  */
 @media screen and (min-width: 1200px){
     .product-items{
         grid-template-columns: repeat(3, 1fr);
