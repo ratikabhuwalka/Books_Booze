@@ -19,18 +19,18 @@
 
         $reviews=array();
 
-        foreach($result as $row){
-            $review=array(
-                "productId" => $row->productId,
-                "productName" => $row->productName,
-                "productLink" => $row->productLink,
-                "averageRating" => $row->averageRating,
-                "numOfRatings" => $row->numOfRatings,
-            );
+        // foreach($result as $row){
+        //     $review=array(
+        //         "productId" => $row->productId,
+        //         "productName" => $row->productName,
+        //         "productLink" => $row->productLink,
+        //         "averageRating" => $row->averageRating,
+        //         "numOfRatings" => $row->numOfRatings,
+        //     );
 
-            array_push($reviews, $review);
-        }
-        echo json_encode($reviews);
+        //     array_push($reviews, $review);
+        // }
+        echo json_encode($result);
         // set response code - 200 OK
         // $secondChancesProductsResponse = json_encode($reviews);
         // $allProducts = array();
